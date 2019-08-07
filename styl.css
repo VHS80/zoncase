@@ -1,0 +1,15 @@
+.appBody{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Roboto Slab,serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #37b1bf;  
+}
+
+
+.text {
+   color: #000;   
+}

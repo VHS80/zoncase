@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+<script src="appControler.js"></script>
+<link rel="stylesheet" href="styl.css">
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="appBody">
+ 
+  <div class="selectBox"> 
+    Vybere rating:
+      <select ng-model="ratingField" ng-options="x.rating for x in ratingJson | unique: 'rating' | orderBy: 'rating' track by x.rating " data-ng-change="updateAvgSum()">
+      </select>
+  </div>  
+
+  <div class="result">
+   Průměrná výše půjčky: <span class="text" ng-show="avgSum">{{avgSum}},-</span> 
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
